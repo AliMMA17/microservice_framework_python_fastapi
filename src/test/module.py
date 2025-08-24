@@ -4,7 +4,7 @@ from src.models import TestItem
 from .basemodels import TestCreate
 
 async def create_test(session: AsyncSession, data: TestCreate) -> TestItem:
-    item = TestItem(name=data.name, note=data.note)
+    item = TestItem(full_name=data.full_name, note=data.note)
     session.add(item)
     await session.commit()
     await session.refresh(item)

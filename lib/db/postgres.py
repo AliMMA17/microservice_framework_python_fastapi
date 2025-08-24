@@ -10,7 +10,7 @@ def _build_async_dsn() -> str:
     user = os.getenv("POSTGRES_USER", "postgres")
     pwd  = os.getenv("POSTGRES_PASSWORD", "postgres")
     host = os.getenv("POSTGRES_HOST", "db")
-    port = os.getenv("POSTGRES_PORT", "5432")
+    port = "5432"
     db   = os.getenv("POSTGRES_DB", "postgres")
     return f"postgresql+asyncpg://{user}:{pwd}@{host}:{port}/{db}"
 
