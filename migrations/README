@@ -1,0 +1,8 @@
+Alembic migrations live here.
+
+Typical workflow:
+- Make model changes in src/models.py
+- Autogenerate a new revision:
+    alembic revision --autogenerate -m "your message"
+- Apply:
+    alembic upgrade head
